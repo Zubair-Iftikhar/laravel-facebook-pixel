@@ -73,7 +73,7 @@ class FacebookPixel
         $this->enabled = false;
     }
 
-    public function setPixelId(int|string $id): void
+    public function setPixelId(string $id): void
     {
         $this->pixelId = $id;
     }
