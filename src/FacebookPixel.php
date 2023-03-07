@@ -34,9 +34,9 @@ class FacebookPixel
 
     public function __construct()
     {
-        $this->enabled = core()->getConfigData('custom.setting.facebook-pixel.enable');
-        $this->pixelId = core()->getConfigData('custom.setting.facebook-pixel.id');
-        $this->token = core()->getConfigData('custom.setting.facebook-pixel.token');
+        $this->enabled = core()->getConfigData('custom.setting.facebook-pixel.enable') ?? 0;
+        $this->pixelId = core()->getConfigData('custom.setting.facebook-pixel.id') ?? '';
+        $this->token = core()->getConfigData('custom.setting.facebook-pixel.token') ?? '';
         $this->sessionKey = config('facebook-pixel.sessionKey');
         $this->eventLayer = new EventLayer();
         $this->customEventLayer = new EventLayer();
